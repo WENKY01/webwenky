@@ -1,0 +1,167 @@
+/* Navbar Mobile Styling */
+#mobileMenu.show {
+    display: block;
+}
+
+section {
+    scroll-margin-top: 4rem;
+    padding: 3rem 0; /* Kurangi padding dari 20 (py-20) menjadi lebih kecil */
+    width: 100%;
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0; /* Hapus padding untuk hero section */
+}
+
+/* Update container untuk lebih compact */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0; /* Lebih kecil lagi untuk mobile */
+    }
+}
+
+/* Navbar Styling */
+#navbar {
+    background: rgba(17, 24, 39, 0.8);
+}
+
+#navbar.scrolled {
+    background: rgba(17, 24, 39, 0.8); /* bg-gray-800 dengan opacity */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transition untuk semua perubahan navbar */
+#navbar {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hover effect untuk link */
+#navbar a {
+    transition: all 0.2s ease-in-out;
+}
+
+#navbar a:hover {
+    transform: translateY(-1px);
+}
+
+.profile-image-container {
+    width: 300px;
+    height: 300px;
+    background-image: url('../images/profile.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 8px solid #f3f4f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Footer akan selalu berada di bawah */
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 0.5rem 0;
+    }
+    
+    #mobileMenu {
+        padding: 1rem 0;
+    }
+    
+    #mobileMenu.show {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 0.5rem;
+    }
+
+    /* Pastikan semua section memiliki padding yang cukup dari navbar */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust container padding for mobile */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Tambahkan flex layout ke body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Skill Cards Styling */
+.skill-bar {
+    transition: all 0.3s ease;
+}
+
+.skill-bar:hover {
+    transform: translateX(10px);
+}
+
+.skill-bar .bg-blue-500,
+.skill-bar .bg-green-500,
+.skill-bar .bg-purple-500 {
+    transition: width 1s ease-in-out;
+}
+
+/* Hover effect untuk cards */
+.transform:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Animation untuk skill bars */
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.skill-bar:hover .bg-blue-500,
+.skill-bar:hover .bg-green-500,
+.skill-bar:hover .bg-purple-500 {
+    animation: fillBar 1.5s ease-out;
+}
+
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}

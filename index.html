@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Perkenalan Diri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- Header/Navigation -->
+<nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between py-2">
+            <div class="flex justify-between items-center">
+                <h1 class="text-lg font-bold text-white">Portfolio</h1>
+                <button class="md:hidden text-white" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="hidden md:flex md:items-center mt-4 md:mt-0" id="mobileMenu">
+                <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <a href="#home" class="text-white hover:text-gray-300 text-sm">Home</a>
+                    <a href="#about" class="text-white hover:text-gray-300 text-sm">About</a>
+                    <a href="#skills" class="text-white hover:text-gray-300 text-sm">Skills</a>
+                    <a href="#contact" class="text-white hover:text-gray-300 text-sm">Contact</a>
+                    <a href="#download" class="text-white hover:text-gray-300 text-sm">Download</a>
+                    <button onclick="handleLogout()" class="bg-red-500 px-3 py-1 rounded text-sm text-white hover:bg-red-600 w-full md:w-auto">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+<div class="flex-grow">
+    <!-- Hero Section with Background Image -->
+    <div id="home" class="hero-section relative">
+    <div class="hero-section relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto relative z-10 h-full flex items-center">
+            <div class="text-white" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">Selamat Datang</h1>
+                <p class="text-xl">Di Website Perkenalan Diri Saya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <section id="about" class="bg-white py-16">
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="profile-image-container rounded-full overflow-hidden mx-auto">
+                        <!-- Profile image will be set via CSS -->
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+                    <p class="text-gray-600 mb-6">
+                        Selamat datang di website perkenalan diri saya. Saya adalah seorang yang passionate
+                        dalam bidang teknologi dan pengembangan web. Dengan pengalaman yang saya miliki,
+                        saya selalu berusaha untuk menciptakan solusi yang inovatif dan efektif.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-100 p-4 rounded" data-aos="zoom-in" data-aos-delay="400">
+                            <h3 class="font-bold mb-2">Keahlian</h3>
+                            <ul class="list-disc list-inside">
+                                <li>Web Development</li>
+                                <li>UI/UX Design</li>
+                                <li>Problem Solving</li>
+                                <li>Mobile Development</li>
+                                <li>Database Management</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded" data-aos="zoom-in" data-aos-delay="600">
+                            <h3 class="font-bold mb-2">Pendidikan</h3>
+                            <ul class="list-disc list-inside">
+                                <li>S1 Teknik Informatika</li>
+                                <li>Bootcamp Web Development</li>
+                                <li>Sertifikasi Digital Marketing</li>
+                                <li>Training UI/UX Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section (menggantikan Projects Section) -->
+<section id="skills" class="bg-gray-100 py-16">
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Skills & Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Frontend Development Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-code text-4xl text-blue-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-center">Frontend Development</h3>
+                    <div class="space-y-3">
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">HTML/CSS</span>
+                                <span class="text-sm font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">JavaScript</span>
+                                <span class="text-sm font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">React</span>
+                                <span class="text-sm font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Development Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105" 
+                 data-aos="fade-up" data-aos-delay="400">
+                <div class="p-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-center">Backend Development</h3>
+                    <div class="space-y-3">
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">PHP</span>
+                                <span class="text-sm font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Node.js</span>
+                                <span class="text-sm font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">MySQL</span>
+                                <span class="text-sm font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & Others Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105" 
+                 data-aos="fade-up" data-aos-delay="600">
+                <div class="p-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-paint-brush text-4xl text-purple-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-center">Design & Others</h3>
+                    <div class="space-y-3">
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">UI/UX Design</span>
+                                <span class="text-sm font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Photoshop</span>
+                                <span class="text-sm font-medium">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Git/GitHub</span>
+                                <span class="text-sm font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16">
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Hubungi Saya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-500 w-8"></i>
+                                <span>email@example.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-blue-500 w-8"></i>
+                                <span>+62 123 4567 8900</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-500 w-8"></i>
+                                <span>Jakarta, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3 class="text-xl font-bold mb-4">Media Sosial</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-2xl text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="text-2xl text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-2xl text-blue-500 hover:text-blue-600">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Nama</label>
+                            <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Pesan</label>
+                            <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Download Section-->
+    <section id="download" class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Download</h2>
+            <div class="max-w-md mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105" 
+                    data-aos="fade-up">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-file-archive text-4xl text-blue-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-center">Source Code</h3>
+                    <p class="text-gray-600 mb-4 text-center">Download source code website ini dalam format ZIP!</p>
+                    <a href="./files/websitesc.zip" download 
+                       class="block w-full bg-blue-500 text-white text-center py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Download Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Portfolio Saya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
